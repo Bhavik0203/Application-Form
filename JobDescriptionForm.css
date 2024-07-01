@@ -1,0 +1,211 @@
+/* Container for the form to center it */
+.form-container {
+    display: flex;
+   position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffcb9b;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .clouds {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    width: 200%;
+    height: 177%;
+    /* background: url(../LoginPage/clouds123.png) repeat-x; */
+    animation: moveClouds 60s linear infinite;
+    background-size: cover;    
+    background-position: center;
+  }
+  
+  @keyframes moveClouds {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Animation for fading in the card */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Style for the main card */
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 90%; /* Adjust this as needed */
+    max-width: 800px; /* Adjust this as needed */
+    margin-left: 10px; /* Center the card horizontally */
+    margin-right: 10px;
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden; /* Prevent content overflow */
+    height: 700%;
+    position: relative;
+  
+  }
+  
+  /* Header style for the card */
+  .card-header {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Section header style */
+  .section-header {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: gray;
+  }
+  
+  /* General styling for form fields */
+  .form-field {
+    margin-bottom: 10px;
+  }
+  
+  /* Textarea styling */
+  textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    height: 40px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+  }
+  
+  /* Container for add more button */
+  .add-more-container {
+    text-align: right;
+  }
+  
+  /* Add more button styling */
+  .add-more-button, .submit-button {
+    background-color: #ffcb9b;
+    color: white;
+    border: none;
+    padding: 10px ;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    
+  
+  }
+  
+  /* Hover effect for buttons */
+  .add-more-button:hover, .submit-button:hover {
+    background-color: white;
+    color: #ffcb9b;
+  }
+  
+  /* Modal background */
+  .modal-background {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Close button for modal */
+  .close-button {
+    background-color: #ffcb9b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+  }
+  
+  .close-button:hover {
+    background-color: white;
+    color: #ffcb9b;
+  }
+  /* Container for add more button */
+  .add-more-container {
+    text-align: right;
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+  
+  /* Add more button styling */
+  .add-more-button, .submit-button, .reset-button {
+    background-color: #ffcb9b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  /* Textarea styling */
+  textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    height: 40px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    spellcheck: true; /* Enable browser-based spell checking */
+  }
+  
+  /* Red underline for misspelled words */
+  textarea::spelling-error {
+    text-decoration: red wavy underline;
+  }
